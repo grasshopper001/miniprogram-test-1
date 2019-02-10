@@ -1,0 +1,32 @@
+<!--pages/posts/posts.wxml-->
+<i-card title="{{name}}" thumb="{{avatar}}">
+  <view slot="content">{{content}}</view>
+  <view slot="footer">
+    <view class="right">
+      {{number_in}}
+      <view style="display:inline-block" bindtap="handleClick">
+        <i-icon type="{{icon}}" size="20"/>
+      </view>
+      <view style="display:inline-block" bindtap="handleComment">
+        <i-icon type="{{icon1}}" size="20"/>
+      </view>
+    </view>
+    <view wx:for="{{comments}}">
+      <view><comment name="{{item.name}}"  content = "{{item.content}}"></comment></view>
+    </view>
+  </view>
+</i-card>
+<view wx:if="{{writing_comment}}">
+  <i-card>
+    <view slot="content">
+      <i-row>
+        <i-col span="19" i-class="col-class">
+          <view style="width:240px" class="input"><textarea  bindinput="handleInput" auto-focus="true" style="height: 1.5em;                width:240px" placeholder="说点儿什么吧" auto-height="true"/></view>
+        </i-col>
+        <i-col span="5" i-class="col-class">
+          <button type="default" size="mini" bindtap="send">发送</button>
+        </i-col>
+      </i-row>
+    </view>
+  </i-card>
+</view>

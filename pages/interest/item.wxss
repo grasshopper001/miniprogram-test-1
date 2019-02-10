@@ -1,0 +1,4 @@
+/* pages/interest/item.wxss */
+.icon{
+  float:right
+}

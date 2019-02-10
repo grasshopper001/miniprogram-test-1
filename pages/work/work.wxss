@@ -1,0 +1,6 @@
+/* pages/work/work.wxss */
+#write{
+  position: fixed;
+  right: 20px;
+  bottom: 60px;
+}

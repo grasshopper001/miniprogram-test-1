@@ -1,0 +1,7 @@
+<!--pages/me/me.wxml-->
+<i-row>
+header
+</i-row>
+<i-row>
+content
+</i-row>

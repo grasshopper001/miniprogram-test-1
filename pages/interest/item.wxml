@@ -1,0 +1,7 @@
+<!--pages/interest/item.wxml-->
+<i-grid-item bindtap="handletap">
+        <i-grid-icon class="icon">
+            <i-icon type="{{icon}}" size="20"/>
+        </i-grid-icon>
+        <i-grid-label>{{label}}</i-grid-label>
+</i-grid-item>

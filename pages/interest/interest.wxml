@@ -1,0 +1,21 @@
+<view>
+<text class="top">选择兴趣点:</text>
+</view>
+<view style="padding-top:10px">
+<i-grid>
+    <item label="科技"></item>
+    <item label="经济"></item>
+    <item label="足球"></item>
+</i-grid>
+<i-grid>
+    <item label="篮球"></item>
+    <item label="综艺"></item>
+    <item label="动漫"></item>
+</i-grid>
+<i-grid>
+    <item label="电影"></item>
+    <item label="美剧"></item>
+    <item label="游戏"></item>
+</i-grid>
+</view>
+<i-button bind:click="handleClick" type="success" long="true">选好了</i-button>

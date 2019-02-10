@@ -1,0 +1,7 @@
+<!--pages/write_post/write_post.wxml-->
+<view>
+  <i-card>
+  <view slot="content"><textarea bindinput="handleInput" auto-focus="true" style="height: 6em" /></view>
+  <view style="width:50px" slot="footer"><i-button bind:click="handleClick" type="success" size="small" inline="true">发送</i-button></view>
+  </i-card>
+</view>

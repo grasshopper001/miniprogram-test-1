@@ -1,0 +1,4 @@
+/* pages/comment/comment.wxss */
+.name{
+  color: blue;
+}
