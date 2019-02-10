@@ -1,0 +1,26 @@
+<!--pages/work/work.wxml-->
+<view hidden="{{show}}">
+  <i-tabs current="aaa" bindchange="handleChange1">
+    <i-tab key="aaa" title="发现"></i-tab>
+    <i-tab key="tab2" title="活动"></i-tab>
+    <i-tab key="tab3" title="社交"></i-tab>
+  </i-tabs>
+  <view style="height:5px"></view>
+  <view wx:for="{{posts}}">
+    <posts number="{{item.number}}" content="{{item.content}}" name="{{item.name}}" avatar = "{{item.avatar}}" iid="{{item.id}}"></posts>
+  </view>
+  <view id="write" bindtap='handleWrite'>
+    <i-icon type="brush" size="35"/>
+  </view>
+</view>
+<view hidden="{{life}}">
+  <life></life>
+</view>
+<view hidden="{{me}}">
+  <me></me>
+</view>
+<i-tab-bar current="{{current}}" bindchange="handleChange" fixed= "true">
+    <i-tab-bar-item key="work" icon="service" current-icon="service_fill" title="工作圈"></i-tab-bar-item>
+    <i-tab-bar-item key="life" icon="emoji" current-icon="emoji_fill" title="生活圈"></i-tab-bar-item>
+    <i-tab-bar-item key="me" icon="mine" current-icon="mine_fill" title="我"></i-tab-bar-item>
+</i-tab-bar>

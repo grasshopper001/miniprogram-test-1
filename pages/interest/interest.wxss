@@ -1,0 +1,5 @@
+/* pages/interest/interest.wxss */
+.top{
+  padding-left: 15px;
+  font-family: Microsoft Yahei Light 
+}

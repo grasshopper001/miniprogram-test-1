@@ -1,0 +1,16 @@
+{
+  "component": true,
+  "usingComponents": {
+    "i-tab-bar": "../../dist/tab-bar/index",
+    "i-tab-bar-item": "../../dist/tab-bar-item/index",
+    "i-row": "../../dist/row/index",
+    "i-col": "../../dist/col/index",
+    "i-tabs": "../../dist/tabs/index",
+    "i-tab": "../../dist/tab/index",
+    "life": "../../pages/life/life",
+    "me": "../../pages/me/me",
+    "posts": "../../pages/posts/posts",
+    "i-card": "../../dist/card/index",
+    "i-icon": "../../dist/icon/index"
+  }
+}
