@@ -1,3 +1,9 @@
+<!--index.wxml-->
+
+<view class="userinfo">
+    <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
+    <block wx:else>
+
 <!--pages/work/work.wxml-->
 <view hidden="{{show}}">
   <i-tabs current="aaa" bindchange="handleChange1">
@@ -24,3 +30,7 @@
     <i-tab-bar-item key="life" icon="emoji" current-icon="emoji_fill" title="生活圈"></i-tab-bar-item>
     <i-tab-bar-item key="me" icon="mine" current-icon="mine_fill" title="我"></i-tab-bar-item>
 </i-tab-bar>
+
+<!--index.wxml-->
+    </block>
+  </view>

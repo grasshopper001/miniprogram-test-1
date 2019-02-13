@@ -32,7 +32,7 @@ Component({
         number_in: this.__data__.number
       })
       wx.request({
-        //url:"http://127.0.0.1:3000/comments",
+        //url:"http://127.0.0.1:3001/comments",
         url: 'http://47.96.26.134:3001/comments',
         method:"post",
         data:{
@@ -63,7 +63,7 @@ Component({
       if(this.data.icon == "praise"){
         var that = this
         wx.request({
-          //url:"http://127.0.0.1:3000/good",
+          //url:"http://127.0.0.1:3001/good",
           url: 'http://47.96.26.134:3001/good',
           method:'post',
           data:{
@@ -111,7 +111,7 @@ Component({
           tmp.data = that.data.comment_content
           tmp.id = that.__data__.iid
           wx.request({
-            //url:"http://127.0.0.1:3000/new_comment",
+            //url:"http://127.0.0.1:3001/new_comment",
             url: 'http://47.96.26.134:3001/new_comment',
             method: "post",
             data: tmp,
@@ -121,7 +121,7 @@ Component({
                 writing_comment: false
               })
               wx.request({
-                //url:"http://127.0.0.1:3000/comments",
+                //url:"http://127.0.0.1:3001/comments",
                 url: 'http://47.96.26.134:3001/comments',
                 method: "post",
                 data: {

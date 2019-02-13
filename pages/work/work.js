@@ -15,7 +15,7 @@ Component({
             success: res => {
               tmp.code = res.code
               wx.request({
-                //url:"http://127.0.0.1:3000/login",
+                //url:"http://127.0.0.1:3001/login",
                 url: 'http://47.96.26.134:3001/login',
                 method: 'post',
                 data: tmp,
@@ -33,7 +33,7 @@ Component({
               wx.getWeRunData({
                 success(res) {
                   wx.request({
-                    //url:"http://127.0.0.1:3000/runData_in",
+                    //url:"http://127.0.0.1:3001/runData_in",
                     url: 'http://47.96.26.134:3001/runData_in',
                     method: "POST",
                     data: {
@@ -54,7 +54,7 @@ Component({
     show(){
       var that = this;
       wx.request({
-        //url:"http://127.0.0.1:3000/posts",
+        //url:"http://127.0.0.1:3001/posts",
         url: 'http://47.96.26.134:3001/posts',
         success(res) {
           that.setData({
@@ -71,12 +71,24 @@ Component({
     current:"work",
     show: false,
     life: true,
-    me: true
+    me: true,
+    //adding
+    userInfo: {},
+    hasUserInfo: false,
+    canIUse: wx.canIUse('button.open-type.getUserInfo')
   },
   /**
    * 组件的方法列表
    */
   methods: {
+    getUserInfo(e){
+      console.log(e)
+      app.globalData.userInfo = e.detail.userInfo
+      this.setData({
+        userInfo: e.detail.userInfo,
+        hasUserInfo: true
+      })
+    },
     handleChange(e) {
       console.log(e.detail.key)
       if (e.detail.key == "work") {

@@ -26,7 +26,7 @@ Component({
           var tmp = res.userInfo
           tmp.content = that.data.content 
           wx.request({
-            //url:"http://127.0.0.1:3000/new_post",
+            //url:"http://127.0.0.1:3001/new_post",
             url: 'http://47.96.26.134:3001/new_post',
             method: "post",
             data: tmp,

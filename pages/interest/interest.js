@@ -20,7 +20,7 @@ Component({
   methods: {
     handleClick(e){
       wx.request({
-        //url:"http://127.0.0.1:3000/tags",
+        //url:"http://127.0.0.1:3001/tags",
         url: 'http://47.96.26.134:3001/tags',
         method:"post",
         data:{
